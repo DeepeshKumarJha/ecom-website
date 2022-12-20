@@ -1,0 +1,87 @@
+@import "/src/scss/theme-colors";
+
+.footer-container {
+  height: 400px;
+  color: $Headline;
+  padding: 3vw;
+
+  .fc-1 {
+    height: fit-content;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .f-about {
+      width: 400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+
+      .fa-heading {
+        font-size: 1.2rem !important;
+        font-weight: 600 !important;
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px !important;
+      }
+
+      .fa-about,
+      .fa-more,
+      .fa-shop {
+        list-style: none;
+      }
+
+      .fa-shop {
+        li {
+          margin-bottom: 20px;
+          font-size: 0.9rem;
+          font-weight: 300;
+        }
+      }
+      .fa-about {
+        li {
+          margin-bottom: 20px;
+          font-size: 0.9rem;
+          font-weight: 300;
+        }
+      }
+      .fa-more {
+        li {
+          margin-bottom: 20px;
+          font-size: 0.9rem;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .f-social {
+      width: 300px;
+      padding: 0 50px 0 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .f-logo {
+        font-family: "Lobster", cursive;
+        font-size: 5rem;
+        text-align: end;
+      }
+      .fs-logo {
+        margin-top: 20px;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        img {
+          height: 35px;
+          width: 35px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

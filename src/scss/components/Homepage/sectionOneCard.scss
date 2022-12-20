@@ -1,0 +1,45 @@
+.s1-card-container {
+  height: fit-content;
+  cursor: pointer;
+
+  .s1-card-product-image {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .s1-card-product-details {
+    margin-top: 10px;
+    // padding: 0 10px;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.4);
+      margin-top: 5px;
+    }
+  }
+
+  .s1-shop-now-btn {
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    width: 80%;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+}

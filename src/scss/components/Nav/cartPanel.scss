@@ -1,0 +1,109 @@
+.cart-panel {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+
+  .panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 33.33vw;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    .cart-panel-container {
+      .cp-header {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .cp-header-back {
+          position: absolute;
+          left: 20px;
+          cursor: pointer;
+          svg {
+            font-weight: 900;
+          }
+        }
+
+        p {
+          font-size: 1.5rem;
+          font-weight: 400;
+          letter-spacing: 0.03rem;
+        }
+      }
+      .cp-body {
+        height: calc(100vh - 150px);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+        .cp-body-nothing {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          line-height: 1.5rem;
+          letter-spacing: 0.01rem;
+
+          p {
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+      .cp-footer {
+        height: 100px;
+        display: flex;
+        .cp-footer-subtotal {
+          height: 100%;
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .cp-footer-subtotal-text {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.3);
+          }
+          .cp-footer-subtotal-price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.8);
+          }
+        }
+        .cp-footer-checkout {
+          width: 70%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .cp-footer-checkout-btn {
+            height: 60px;
+            width: 90%;
+            background: black;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.03rem;
+          }
+        }
+      }
+    }
+  }
+}

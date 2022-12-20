@@ -1,0 +1,49 @@
+.sus-main-container {
+  width: 100vw;
+  overflow: hidden;
+
+  .s1-main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .s1-content-container {
+      width: 33.33vw;
+
+      h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        line-height: 5rem;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      p {
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 2rem;
+        font-weight: 300;
+      }
+
+      .s1-shop-now-btn {
+        font-size: 1.3rem;
+        border: 2px solid black;
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 400px;
+        background: white;
+        transition: 0.3s;
+        margin: 50px auto;
+        cursor: pointer;
+
+        &:hover {
+          background: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
