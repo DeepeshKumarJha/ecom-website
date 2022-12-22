@@ -1,0 +1,16 @@
+.s1-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2vw;
+  padding: 0px 10vw;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .s1-container {
+    grid-template-columns: 270px 270px 270px 270px 270px;
+    overflow-x: scroll;
+    gap: 30px;
+  }
+}

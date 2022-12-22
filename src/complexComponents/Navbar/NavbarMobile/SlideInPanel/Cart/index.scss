@@ -1,0 +1,95 @@
+@media screen and (max-width: 500px) {
+  .mobile-cart-panel {
+    position: fixed;
+    width: 100vw;
+    height: calc(var(--vh) * 100);
+    top: 0;
+    left: 100%;
+    z-index: 100;
+    background: white;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      flex-shrink: 0;
+      height: 80px;
+      font-size: 3rem;
+      font-weight: 400;
+      border-bottom: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mobile-cart-product-container {
+      height: calc(100vh - 80px);
+      overflow-y: scroll;
+      padding: 20px 5vw;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .mobile-cart-product {
+        flex-shrink: 0;
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        border-radius: 10px;
+        height: 150px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+    }
+
+    .mobile-cart-checkout-or-close {
+      width: 100vw;
+      height: 200px;
+      padding: 20px 5vw;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(1px);
+      border-radius: 30px 30px 0 0;
+
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      .mobile-cart-checkout-btn,
+      .mobile-cart-close-btn {
+        margin: 10px 0;
+        background: black;
+        color: white;
+        height: 60px;
+        border-radius: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mobile-cart-checkout-btn {
+        background: black;
+        font-size: 1.5rem;
+      }
+
+      .mobile-cart-close-btn {
+        overflow: hidden;
+        border: 2px solid black;
+
+        .mc-back-arrow {
+          background: white;
+          width: 100%;
+          height: 100%;
+          color: black;
+          font-size: 2.7rem;
+          position: relative;
+
+          svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}

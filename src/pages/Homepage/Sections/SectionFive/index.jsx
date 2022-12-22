@@ -1,5 +1,5 @@
-import "../../scss/components/Homepage/sectionFive.scss";
-import ProductDisplay from "./sectionFourAndFiveProductDisplay/productDisplay";
+import ProductDisplay from "../../../../components/Homepage/sectionFourAndFiveProductDisplay/productDisplay";
+import "./index.scss";
 
 let imglist = [
   "https://res.cloudinary.com/dqimeuotl/image/upload/v1671400308/shoes-ecom-site/pexels-luis-quintero-14174472_fvild4.webp",
@@ -27,16 +27,18 @@ export default function SectionFive() {
             return <ProductDisplay key={index} imgval={imglist[index]} />;
           })}
         </div>
-        <div className="s5-video-card">
-          <video autoPlay muted loop>
-            <source
-              src={
-                "https://res.cloudinary.com/dqimeuotl/video/upload/v1671402229/shoes-ecom-site/video2_txouhm.webm"
-              }
-              type="video/mp4"
-            ></source>
-          </video>
-        </div>
+        {window.innerWidth >= 500 && (
+          <div className="s5-video-card">
+            <video autoPlay muted loop>
+              <source
+                src={
+                  "https://res.cloudinary.com/dqimeuotl/video/upload/v1671402229/shoes-ecom-site/video2_txouhm.webm"
+                }
+                type="video/mp4"
+              ></source>
+            </video>
+          </div>
+        )}
       </div>
     </div>
   );

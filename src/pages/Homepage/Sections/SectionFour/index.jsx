@@ -1,8 +1,5 @@
-import "../../scss/components/Homepage/sectionFour.scss";
-// side card images
-import gsap from "gsap";
-import { useLayoutEffect, useRef, useState } from "react";
-import ProductDisplay from "./sectionFourAndFiveProductDisplay/productDisplay";
+import ProductDisplay from "../../../../components/Homepage/sectionFourAndFiveProductDisplay/productDisplay";
+import "./index.scss";
 
 let imglist = [
   "https://res.cloudinary.com/dqimeuotl/image/upload/v1671400675/shoes-ecom-site/pexels-madvortex-9214280_hgp47g.webp",
@@ -25,16 +22,18 @@ export default function SectionFour() {
     <div className="s4">
       <SectionFourHeading />
       <div className="s4-cards-container">
-        <div className="s4-video-card">
-          <video autoPlay muted loop>
-            <source
-              src={
-                "https://res.cloudinary.com/dqimeuotl/video/upload/v1671402031/shoes-ecom-site/video1_ibnzef.webm"
-              }
-              type="video/mp4"
-            ></source>
-          </video>
-        </div>
+        {window.innerWidth >= 500 && (
+          <div className="s4-video-card">
+            <video autoPlay muted loop>
+              <source
+                src={
+                  "https://res.cloudinary.com/dqimeuotl/video/upload/v1671402031/shoes-ecom-site/video1_ibnzef.webm"
+                }
+                type="video/mp4"
+              ></source>
+            </video>
+          </div>
+        )}
         <div className="s4-product-container">
           {[...Array(4)].map((val, index) => {
             return <ProductDisplay key={index} imgval={imglist[index]} />;

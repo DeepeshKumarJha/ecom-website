@@ -43,3 +43,15 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .s1-card-container {
+    .s1-card-product-image {
+    }
+    .s1-card-product-details {
+    }
+    .s1-shop-now-btn {
+      height: 40px;
+    }
+  }
+}

@@ -8,7 +8,6 @@
 
   .pd-product-image {
     width: 100%;
-    background: orange;
     height: 300px;
     border-radius: 20px;
     background-size: cover;
@@ -76,6 +75,28 @@
     }
     .pd-product-details-p2 {
       padding-top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pd-product {
+    padding: 0 5px;
+
+    .pd-product-image {
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    .pd-product-details {
+      .pd-product-details-p1 {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .pd-product-details-p2 {
+        font-size: 0.8rem;
+        padding-top: 5px;
+      }
     }
   }
 }

@@ -1,87 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import "/src/scss/theme-colors";
+// @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+// @import "/src/scss/theme-colors";
 
-.nav-container {
-  height: 70px;
-  width: 100vw;
-  background: $Background;
-  color: $Headline;
-  position: fixed;
-  top: 0;
-  display: flex;
-  align-items: center;
-  padding: 0 4%;
-  z-index: 20;
+// .nav-container {
+//   height: 70px;
+//   width: 100vw;
+//   background: $Background;
+//   color: $Headline;
+//   position: fixed;
+//   top: 0;
+//   display: flex;
+//   align-items: center;
+//   padding: 0 4%;
+//   z-index: 20;
 
-  .nav-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Lobster", cursive;
-    font-size: 2.7rem;
-    width: 33.33%;
-    cursor: pointer;
-  }
+//   .nav-logo {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     font-family: "Lobster", cursive;
+//     font-size: 2.7rem;
+//     width: 33.33%;
+//     cursor: pointer;
+//   }
 
-  ul {
-    list-style: none;
-  }
+//   ul {
+//     list-style: none;
+//   }
 
-  .first-half-menu {
-    display: flex;
-    justify-content: flex-start;
-    width: 33.33%;
-  }
+//   .first-half-menu {
+//     display: flex;
+//     justify-content: flex-start;
+//     width: 33.33%;
+//   }
 
-  .second-half-menu {
-    display: flex;
-    justify-content: flex-end;
-    width: 33.33%;
-  }
+//   .second-half-menu {
+//     display: flex;
+//     justify-content: flex-end;
+//     width: 33.33%;
+//   }
 
-  .first-half-menu > ul {
-    width: fit-content;
-    display: flex;
-    gap: 30px;
+//   .first-half-menu > ul {
+//     width: fit-content;
+//     display: flex;
+//     gap: 30px;
+//   }
 
-    li {
-      font-size: 1.2rem;
-      font-weight: 500;
-      letter-spacing: 0.02rem;
-      cursor: pointer;
-    }
-  }
+//   .second-half-menu > ul {
+//     width: fit-content;
+//     display: flex;
+//     gap: 30px;
 
-  .second-half-menu > ul {
-    width: fit-content;
-    display: flex;
-    gap: 30px;
+//     .nav-cart {
+//       position: relative;
+//       .nav-cart-bubble {
+//         display: flex;
 
-    li {
-      font-size: 1.1rem;
-      text-transform: capitalize;
-      font-weight: 500;
-      letter-spacing: 0.02rem;
-      cursor: pointer;
-    }
-
-    .nav-cart {
-      position: relative;
-      .nav-cart-bubble {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 10px;
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        background: red;
-        right: 0;
-        top: 0;
-        transform: translate(50%, -10%);
-        border-radius: 100%;
-        color: white;
-      }
-    }
-  }
-}
+//         justify-content: center;
+//         align-items: center;
+//         font-size: 10px;
+//         position: absolute;
+//         width: 15px;
+//         height: 15px;
+//         background: red;
+//         right: 0;
+//         top: 0;
+//         transform: translate(50%, -10%);
+//         border-radius: 100%;
+//         color: white;
+//       }
+//     }
+//   }
+// }

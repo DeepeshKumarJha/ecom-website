@@ -85,3 +85,33 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .footer-container {
+    height: fit-content;
+    margin-top: 50px;
+    padding: 2vw;
+
+    .fc-1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 0;
+
+      .f-about {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 100%;
+        padding: 20px 10px 20px 10px;
+      }
+
+      .f-social {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

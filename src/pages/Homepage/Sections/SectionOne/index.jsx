@@ -1,5 +1,5 @@
-import "../../scss/components/Homepage/sectionOne.scss";
-import SectionOneCard from "./sectionOneCard";
+import SectionOneCard from "../../../../components/Homepage/sectionOneCard";
+import "./index.scss";
 
 const products = [
   {

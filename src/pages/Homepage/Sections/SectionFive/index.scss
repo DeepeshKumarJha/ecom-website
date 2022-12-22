@@ -47,3 +47,18 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .s5 {
+    .s5-cards-container {
+      grid-template-columns: 1fr;
+
+      .s5-video-card {
+        display: none;
+      }
+      .s5-product-container {
+        row-gap: 20px;
+      }
+    }
+  }
+}

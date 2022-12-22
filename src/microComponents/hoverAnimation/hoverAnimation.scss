@@ -1,0 +1,20 @@
+.hover-animation {
+  position: relative;
+  width: fit-content;
+  z-index: 10;
+  cursor: pointer;
+
+  .under-line {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background: black;
+    right: 0;
+    left: 100%;
+    top: 100%;
+    transform: translateY(-50%);
+    background: black;
+    z-index: 5;
+    border-radius: 100px;
+  }
+}

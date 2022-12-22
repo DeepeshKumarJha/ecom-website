@@ -1,0 +1,31 @@
+.button-base {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 500px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.black-white {
+  background: black;
+  color: white;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
+.white-black {
+  background: white;
+  color: black;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}

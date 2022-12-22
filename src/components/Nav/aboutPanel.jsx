@@ -1,48 +1,21 @@
 import gsap from "gsap";
 import { useLayoutEffect, useRef, useState } from "react";
 import { ReactComponent as BackLogo } from "../../images/icons/70 Basic Icons-all-24.svg";
+import HoverAnimation from "../../microComponents/hoverAnimation/HoverAnimation.component";
 import "../../scss/components/Nav/aboutPanel.scss";
-
-const ListItems = ({ value, index }) => {
-  const [isAbove, setIsAbove] = useState(false);
-  const list_ref = useRef();
-
-  useLayoutEffect(() => {
-    const timeline = gsap.timeline();
-
-    if (isAbove) {
-      timeline.to(list_ref.current, { left: 0 });
-      timeline.set(list_ref.current, { left: 0, right: 0 });
-    } else {
-      timeline.to(list_ref.current, { right: "100%" });
-      timeline.set(list_ref.current, { right: 0, left: "100%" });
-    }
-  }, [isAbove]);
-
-  const mouseEnters = () => {
-    setIsAbove(true);
-  };
-
-  const mouseLeaves = () => {
-    setIsAbove(false);
-  };
-
-  return (
-    <li
-      onMouseEnter={mouseEnters}
-      onMouseLeave={mouseLeaves}
-      className={`about-panel-list-item ${value.replaceAll(" ", "-")}-${index}`}
-    >
-      <div className="about-panel-list-overlay" ref={list_ref}></div>
-      <p>{value}</p>
-    </li>
-  );
-};
 
 export default function AboutPanel({ panel, setPanel }) {
   const [direction, setDirection] = useState(false);
   const aboutRef = useRef();
   const listRef = useRef();
+  const about_text_style = {
+    fontSize: "2rem",
+    fontWeight: 400,
+    position: "relative",
+    width: "fit-content",
+    zIndex: 10,
+  };
+
   const menuItemList = [
     "Ingredients",
     "Sustainability",
@@ -89,7 +62,14 @@ export default function AboutPanel({ panel, setPanel }) {
             <BackLogo className="about-panel-close-btn" onClick={closePanel} />
             <ul ref={listRef}>
               {menuItemList.map((val, index) => {
-                return <ListItems value={val} key={index} index={index} />;
+                return (
+                  <HoverAnimation
+                    text={val}
+                    key={index}
+                    index={index}
+                    aboutText={about_text_style}
+                  />
+                );
               })}
             </ul>
           </div>

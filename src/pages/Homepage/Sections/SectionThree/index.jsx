@@ -2,7 +2,7 @@ import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "../../scss/components/Homepage/sectionThree.scss";
+import "./index.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 

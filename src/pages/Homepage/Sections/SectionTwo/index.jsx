@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "../../scss/components/Homepage/sectionTwo.scss";
+import "./index.scss";
 
 export default function SectionTwo() {
   const navigate = useNavigate();
