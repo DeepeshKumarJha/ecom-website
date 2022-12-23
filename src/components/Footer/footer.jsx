@@ -14,14 +14,13 @@ export default function Footer() {
             <ul className="fa-shop">
               <li className="fa-heading">SHOP</li>
               <li>All Products</li>
-              <li>Oral Care</li>
-              <li>Personal Care</li>
-              <li>Gift Sets</li>
+              <li>Sport Shoes</li>
+              <li>Sneakers</li>
+              <li>Boots</li>
             </ul>
 
             <ul className="fa-about">
               <li className="fa-heading">ABOUT</li>
-              <li>Ingredients</li>
               <li>Sustainability</li>
               <li>About Us</li>
               <li>Blog</li>

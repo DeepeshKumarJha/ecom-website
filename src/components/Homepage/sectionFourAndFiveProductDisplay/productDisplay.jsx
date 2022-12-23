@@ -71,8 +71,8 @@ const ProductDisplay = ({ imgval }) => {
       <div className="pd-product-details">
         <div className="pd-product-details-p1">
           <div className="pd-pd-heading-and-all">
-            <h3>Tootpaste Bits</h3>
-            <p>Fresh Mint with Fluoride</p>
+            <h3>Sneaker</h3>
+            <p>Something about sneaker</p>
           </div>
           <div className="pd-pd-price">
             <p>₹2050.00</p>

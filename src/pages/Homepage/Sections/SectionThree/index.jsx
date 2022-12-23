@@ -17,13 +17,13 @@ function CardOne() {
   };
 
   useLayoutEffect(() => {
-    gsap.to(img1ref.current, {
-      y: "-60",
-      scrollTrigger: {
-        trigger: ".s3-c1",
-        scrub: 3,
-      },
-    });
+    // gsap.to(img1ref.current, {
+    //   y: "-60",
+    //   scrollTrigger: {
+    //     trigger: ".s3-c1",
+    //     scrub: 3,
+    //   },
+    // });
   }, []);
 
   return (
@@ -58,22 +58,22 @@ function CardOne() {
 
 function CardTwo() {
   useLayoutEffect(() => {
-    gsap.fromTo(
-      ".s3-c2",
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".s3-c2",
-          end: "20% 90%",
-          scrub: 1,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   ".s3-c2",
+    //   {
+    //     opacity: 0,
+    //     y: 50,
+    //   },
+    //   {
+    //     y: 0,
+    //     opacity: 1,
+    //     scrollTrigger: {
+    //       trigger: ".s3-c2",
+    //       end: "20% 90%",
+    //       scrub: 1,
+    //     },
+    //   }
+    // );
   }, []);
 
   return (
@@ -97,23 +97,23 @@ function CardTwo() {
 
 function CardThree() {
   useLayoutEffect(() => {
-    gsap.fromTo(
-      ".s3-c3",
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".s3-c3",
-          start: "top 90%",
-          end: "20% 80%",
-          scrub: 1,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   ".s3-c3",
+    //   {
+    //     opacity: 0,
+    //     y: 50,
+    //   },
+    //   {
+    //     y: 0,
+    //     opacity: 1,
+    //     scrollTrigger: {
+    //       trigger: ".s3-c3",
+    //       start: "top 90%",
+    //       end: "20% 80%",
+    //       scrub: 1,
+    //     },
+    //   }
+    // );
   }, []);
 
   return (

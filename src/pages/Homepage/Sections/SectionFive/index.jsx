@@ -12,7 +12,7 @@ let imglist = [
 const SectionFourHeading = () => {
   return (
     <div className="s5-heading-container">
-      <h3>Personal Care</h3>
+      <h3>Part - 2</h3>
     </div>
   );
 };
