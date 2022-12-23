@@ -2,10 +2,9 @@ import React, { Suspense, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
+  redirect,
   RouterProvider,
-  useNavigate,
 } from "react-router-dom";
-import { DeviceProvider } from "./Context/Device";
 import Root from "./routes/root";
 import "./scss/index.scss";
 
@@ -60,10 +59,10 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 const NavigateTo = ({ goto }) => {
-  const navigate = useNavigate();
   useEffect(() => {
-    navigate(goto);
+    redirect(goto);
   }, []);
+
   return <></>;
 };
 
@@ -83,12 +82,27 @@ const router = createBrowserRouter([
       },
       {
         path: "collections",
-        element: <Collections />,
+        element: (
+          <Suspense fallback={<div></div>}>
+            <Collections />
+          </Suspense>
+        ),
         children: [
-          { path: "", element: <NavigateTo goto="/collections/all" /> },
+          {
+            path: "",
+            element: (
+              <Suspense fallback={<div></div>}>
+                <NavigateTo goto="/collections/all" />
+              </Suspense>
+            ),
+          },
           {
             path: "all",
-            element: <AllCollections />,
+            element: (
+              <Suspense fallback={<div></div>}>
+                <AllCollections />
+              </Suspense>
+            ),
           },
           {
             path: "oral-care",
@@ -98,24 +112,61 @@ const router = createBrowserRouter([
       },
       {
         path: "account",
-        element: <Account />,
+        element: (
+          <Suspense fallback={<div></div>}>
+            <Account />
+          </Suspense>
+        ),
         children: [
           { path: "", element: <NavigateTo goto="/account/login" /> },
-          { path: "login", element: <Login /> },
-          { path: "register", element: <Register /> },
+          {
+            path: "login",
+            element: (
+              <Suspense fallback={<div></div>}>
+                <Login />
+              </Suspense>
+            ),
+          },
+          {
+            path: "register",
+            element: (
+              <Suspense fallback={<div></div>}>
+                <Register />
+              </Suspense>
+            ),
+          },
         ],
       },
-      { path: "sustainability", element: <Sustainability /> },
-      { path: "product/:id", element: <ProductPage /> },
-      { path: "about-us", element: <AboutUs /> },
+      {
+        path: "sustainability",
+        element: (
+          <Suspense fallback={<div></div>}>
+            <Sustainability />
+          </Suspense>
+        ),
+      },
+      {
+        path: "product/:id",
+        element: (
+          <Suspense fallback={<div></div>}>
+            <ProductPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "about-us",
+        element: (
+          <Suspense fallback={<div></div>}>
+            <AboutUs />
+          </Suspense>
+        ),
+      },
     ],
   },
 ]);
 
 root.render(
-  <>
-    <DeviceProvider>
-      <RouterProvider router={router} />
-    </DeviceProvider>
-  </>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

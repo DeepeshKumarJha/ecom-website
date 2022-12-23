@@ -1,20 +1,19 @@
 import { useEffect } from "react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Outlet, redirect, useLocation } from "react-router-dom";
 import "../../scss/pages/Collections/Collections.scss";
 
 export default function Collections() {
   let location = useLocation().pathname.split("/");
   location = location[location.length - 1];
-  const navigate = useNavigate();
 
   console.log(location);
 
   const goToAll = () => {
-    navigate("/collections/all");
+    redirect("/collections/all");
   };
 
   const goToOral = () => {
-    navigate("/collections/oral-care");
+    redirect("/collections/oral-care");
   };
 
   return (

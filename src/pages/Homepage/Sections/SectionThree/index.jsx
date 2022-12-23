@@ -1,7 +1,7 @@
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { useEffect, useLayoutEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLayoutEffect, useRef } from "react";
+import { redirect } from "react-router-dom";
 import "./index.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,10 +10,9 @@ function CardOne() {
   const img1ref = useRef();
   const img2ref = useRef();
   const img3ref = useRef();
-  const navigate = useNavigate();
 
   const takeMeToTheMoon = () => {
-    navigate("/about-us");
+    redirect("/about-us");
   };
 
   useLayoutEffect(() => {

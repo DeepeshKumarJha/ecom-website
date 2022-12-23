@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 import "../../scss/components/Homepage/sectionOneCard.scss";
 
 export default function SectionOneCard({ data }) {
-  const navigate = useNavigate();
-
   const takeMeToTheMoon = () => {
-    navigate("/product/asfdasdf");
+    redirect("/product/asfdasdf");
   };
 
   return (

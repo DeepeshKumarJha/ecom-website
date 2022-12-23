@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { useLayoutEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 
 import "../../../scss/components/Homepage/sectionFourAndFiveProductDisplay/productDisplay.scss";
 
@@ -8,30 +8,29 @@ const ProductDisplay = ({ imgval }) => {
   const [isIn, setIsIn] = useState(false);
   const learnRef = useRef();
   const addCartRef = useRef();
-  const navigate = useNavigate();
 
-  useLayoutEffect(() => {
-    // move add to cart
-    const anim1 = gsap.to(addCartRef.current, {
-      y: isIn ? -70 : 0,
-      opacity: isIn ? 1 : 0,
-      // delay: isIn ? 0 : 0.1,
-      duration: 0.5,
-    });
+  // useLayoutEffect(() => {
+  //   // move add to cart
+  //   const anim1 = gsap.to(addCartRef.current, {
+  //     y: isIn ? -70 : 0,
+  //     opacity: isIn ? 1 : 0,
+  //     // delay: isIn ? 0 : 0.1,
+  //     duration: 0.5,
+  //   });
 
-    // move learn more
-    const anim2 = gsap.to(learnRef.current, {
-      // delay: isIn ? 0.1 : 0,
-      y: isIn ? -120 : 0,
-      opacity: isIn ? 1 : 0,
-      duration: 0.6,
-    });
+  //   // move learn more
+  //   const anim2 = gsap.to(learnRef.current, {
+  //     // delay: isIn ? 0.1 : 0,
+  //     y: isIn ? -120 : 0,
+  //     opacity: isIn ? 1 : 0,
+  //     duration: 0.6,
+  //   });
 
-    return () => {
-      anim1.kill();
-      anim2.kill();
-    };
-  }, [isIn]);
+  //   return () => {
+  //     anim1.kill();
+  //     anim2.kill();
+  //   };
+  // }, [isIn]);
 
   const handleEntry = () => {
     setIsIn(true);
@@ -42,7 +41,7 @@ const ProductDisplay = ({ imgval }) => {
   };
 
   const takeMeToTheMoon = () => {
-    navigate("product/asfsf");
+    redirect("product/asfsf");
   };
 
   return (

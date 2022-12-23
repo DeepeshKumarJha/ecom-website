@@ -29,14 +29,14 @@ export default function SectionFive() {
         </div>
         {window.innerWidth >= 500 && (
           <div className="s5-video-card">
-            <video autoPlay muted loop>
+            {/* <video autoPlay muted loop>
               <source
                 src={
                   "https://res.cloudinary.com/dqimeuotl/video/upload/v1671402229/shoes-ecom-site/video2_txouhm.webm"
                 }
                 type="video/mp4"
               ></source>
-            </video>
+            </video> */}
           </div>
         )}
       </div>

@@ -24,14 +24,14 @@ export default function SectionFour() {
       <div className="s4-cards-container">
         {window.innerWidth >= 500 && (
           <div className="s4-video-card">
-            <video autoPlay muted loop>
+            {/* <video autoPlay muted loop>
               <source
                 src={
                   "https://res.cloudinary.com/dqimeuotl/video/upload/v1671402031/shoes-ecom-site/video1_ibnzef.webm"
                 }
                 type="video/mp4"
               ></source>
-            </video>
+            </video> */}
           </div>
         )}
         <div className="s4-product-container">

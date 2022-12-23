@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Button from "../../../../microComponents/Button/Button.component";
 import "./index.scss";
 

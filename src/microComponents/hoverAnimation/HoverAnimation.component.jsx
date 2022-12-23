@@ -1,12 +1,11 @@
 import gsap from "gsap";
 import { useLayoutEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 import "./hoverAnimation.scss";
 
 export default function HoverAnimation({ text, takeMeTo, aboutText }) {
   const [above, setAbove] = useState(false);
   const txtRef = useRef();
-  const navigate = useNavigate();
 
   useLayoutEffect(() => {
     const tl = gsap.timeline();
@@ -29,7 +28,7 @@ export default function HoverAnimation({ text, takeMeTo, aboutText }) {
   };
 
   const letsGo = () => {
-    navigate(takeMeTo);
+    redirect(takeMeTo);
   };
 
   return (

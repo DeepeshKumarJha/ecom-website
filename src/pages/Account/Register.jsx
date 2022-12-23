@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 import "../../scss/pages/Account/Register.scss";
 
 export default function Register() {
-  const navigate = useNavigate();
-
   const takeMeToTheMoon = () => {
-    navigate("/");
+    redirect("/");
   };
 
   return (

@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import "./Button.scss";
 
 /*
@@ -11,10 +11,8 @@ export default function Button({ text, type, takeMeTo }) {
   // one which is black and onhover convert to white;
   // one which is white and goes to black onhover;
 
-  const navigate = useNavigate();
-
   const letsGo = () => {
-    navigate(takeMeTo);
+    redirect(takeMeTo);
   };
 
   return (

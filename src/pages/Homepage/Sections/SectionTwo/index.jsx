@@ -1,11 +1,9 @@
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import "./index.scss";
 
 export default function SectionTwo() {
-  const navigate = useNavigate();
-
   const takeMeToTheShop = () => {
-    navigate("/collections/all");
+    redirect("/collections/all");
   };
 
   return (

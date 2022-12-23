@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Navbar from "../complexComponents/Navbar";
 import Footer from "../components/Footer/footer";
 import "./root.scss";
@@ -7,6 +7,7 @@ import "./root.scss";
 export default function Root() {
   return (
     <div className="boss-container" style={{ overflow: "hidden" }}>
+      <ScrollRestoration />
       <Navbar />
       <Outlet />
       <Footer />

@@ -1,8 +1,7 @@
 import { useLayoutEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AboutPanel from "../../../components/Nav/aboutPanel";
 import CartPanel from "../../../components/Nav/cartPanel";
-import { useDeviceWidthContext } from "../../../Context/Device";
 import HoverAnimation from "../../../microComponents/hoverAnimation/HoverAnimation.component";
 import "./index.scss";
 
@@ -53,11 +52,16 @@ export default function NavbarComputer() {
         <div className="nav-wrapper">
           <ul className="nav-c1">
             <li>
-              <HoverAnimation
-                text="Shop"
-                takeMeTo="/collections/all"
-                aboutText={hover_text_style}
-              />
+              <Link
+                style={{ color: "none", textDecoration: "none" }}
+                to="/collections/all"
+              >
+                <HoverAnimation
+                  text="Shop"
+                  takeMeTo="/collections/all"
+                  aboutText={hover_text_style}
+                />
+              </Link>
             </li>
             <li onClick={handleAboutClick}>
               <HoverAnimation text="About" aboutText={hover_text_style} />
@@ -71,9 +75,9 @@ export default function NavbarComputer() {
             </li>
           </ul>
         </div>
-        <div className="nav-c2" onClick={homesweethome}>
-          Shoes
-        </div>
+        <Link style={{ color: "none", textDecoration: "none" }} to="/">
+          <div className="nav-c2">Shoes</div>
+        </Link>
         <div className="nav-wrapper">
           <ul className="nav-c3">
             <li className="nav-cart" onClick={handleCartClick}>
